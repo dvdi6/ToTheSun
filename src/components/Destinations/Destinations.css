@@ -1,0 +1,193 @@
+* {
+    box-sizing: border-box;
+}
+.container-header-link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.header-destinations {
+    text-align: center;
+    display: block;
+}
+
+#link-home {
+    font-size: 1rem;
+    font-weight: normal;
+    text-decoration: none;
+    color: #333;
+    background-color: #f0f0f0;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.destinations {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 1rem;
+    justify-content: center; 
+    align-content: center; 
+    margin: 0 auto;
+    padding: 1rem;
+    max-width: 1500px; 
+    overflow: auto;
+}
+
+.destination-container {
+    display: grid;
+    grid-template-rows: 50% 50%;
+    gap: 0.5rem;
+    align-items: center;
+    max-width: 800px;
+    min-height: 400px; /* Fixed height for the container */
+    margin-bottom: 1rem;
+    background-color: #F5F5F5;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.destination-details-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: flex-start;
+    gap: 0.5rem;
+    justify-content: space-between;
+}
+
+.destination-name-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.destination-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.destination-description {
+    font-size: 1rem;
+    font-weight: normal;
+    font-style: italic;
+}
+
+.location-link {
+    font-size: 1rem;
+    color: #1A1B1B;
+    margin-left: 0.5rem;
+}
+
+.destination-image {
+    width: 200px;
+    aspect-ratio: 1 / 1;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    margin-top: 0.5rem;
+}
+
+.weather-score {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+    color: #F4F5EFff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.day-forecast {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    font-size: 0.8rem;
+    width: 100%;
+}
+
+.dayname, .conditions, .temperature {
+    text-align: left;
+}
+
+@media (min-width: 340px) and (max-width: 500px) {
+    .destinations {
+        grid-template-columns: 1fr; 
+        max-width: 400px;
+    }
+
+    .destination-container {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: 30% 70%;
+        width: 100%;
+        min-height: 300px;
+        padding: 1rem;
+    }
+
+    .destination-details-container, 
+    .day-forecast, 
+    .destination-name-container {
+        flex-direction: column;
+        display: flex;
+    }
+
+    .destination-details-container {
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+
+    .destination-name-container {
+       align-items: center;
+       justify-content: center;
+    }
+
+    .day-forecast {
+        font-size: .950rem;
+    }
+}
+
+@media (min-width: 500px) and (max-width: 1280px) {
+    .destinations {
+        max-width: 800px;
+    }
+
+    .destination-container {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: 30% 70%;
+        width: 100%;
+        min-height: 300px;
+        padding: 1rem;
+    }
+
+    .destination-details-container, 
+    .day-forecast, 
+    .destination-name-container {
+        flex-direction: column;
+        display: flex;
+    }
+
+    .destination-details-container {
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+
+    .destination-name-container {
+       align-items: center;
+       justify-content: center;
+    }
+
+    .day-forecast {
+        font-size: 0.975rem;
+    }
+}
+

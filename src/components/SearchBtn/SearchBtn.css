@@ -1,0 +1,24 @@
+.search-button {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    background-color: #E0E0E0;
+    border: 2px solid #f0f0f0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    padding: 20px 30px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.search-button:hover {
+    background-color: #6BAF92;
+    color: #000;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* --bone: #E1D5BFff;
+--brown-sugar: #AB5C3Aff;
+--buff: #E2A573ff;
+--khaki: #C5B39Eff;
+--carrot-orange: #F19A41ff; */

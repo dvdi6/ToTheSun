@@ -1,0 +1,27 @@
+.navbar-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 8%;
+    max-width: 100%;
+    color: #4A4A4A;
+    background-color: #FAFAFA;
+    padding: 1rem;
+    border-bottom: 1px solid #333333; 
+}
+
+.nav-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333333;
+    font-size: calc(0.5rem + 1vw);
+} 

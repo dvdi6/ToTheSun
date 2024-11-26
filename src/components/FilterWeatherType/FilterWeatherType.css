@@ -3,18 +3,17 @@
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    padding: 1rem;
 }
 
 #weather-values {
-    font-size: 1.2rem;
+    font-size: calc(1rem, 1vw);
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
 }
 
-input[type="checkbox"] {
+#checkbox-input{
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;

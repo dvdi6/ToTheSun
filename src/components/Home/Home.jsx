@@ -44,9 +44,9 @@ export default function Home() {
                 <TemperatureSlider value={temperature} onChange={handleTemperatureChange} />
                 <FilterWeatherTypeBtn options={weatherOptions} onChange={toggleWeatherType} />
             </div>
-                <SearchBtn startSearching={startSearching}>Search Destinations</SearchBtn>
+                <SearchBtn startSearching={startSearching}>Search here!</SearchBtn>
             <div className="home-text">    
-                <p className="home-subheader">Discover Your Perfect Last-Minute Getaway</p>
+                <p className="home-subheader">Discover Your Perfect Last-Minute Getaway!</p>
                 <p className="home-subheader2">
                         Your tool for finding the best travel destinations with sunny, warm weather during wintertime.
                  </p>

@@ -33,6 +33,8 @@
     background-color: #F7F3EA ;
     justify-content: center;
     align-items: flex-start;
+    padding: 1.5rem;
+    margin-top: 1rem;
 }
 
 .home-subheader {

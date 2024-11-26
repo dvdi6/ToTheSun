@@ -6,6 +6,7 @@ export default function FilterWeatherTypeBtn({ options, onChange }) {
             {options.map((option) => (
                 <label id="weather-values"key={option.value}>
                     <input
+                        id="checkbox-input"
                         type="checkbox"
                         name="weather"
                         value={option.value}

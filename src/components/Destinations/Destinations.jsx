@@ -59,16 +59,18 @@ export default function Destinations() {
         <>
             <div className="container-header-link">
                 <NavLink id="link-home" to="/" element={<Home />}>
-                    Back to home
+                    Home
                 </NavLink>
-                <h1 className="header-destinations">7-Day Weather Forecast for Destinations</h1>
-                <SortButtons
-                onSortByName={handleSortByName}
-                onSortByScore={handleSortByScore}
-                isSortedByNameAsc={sortConfig.type === 'name' && sortConfig.asc}
-                isSortedByScoreAsc={sortConfig.type === 'score' && sortConfig.asc}
-                />
-                <ToggleButton onClick={resetWeatherTypes}>Show All</ToggleButton>
+                <h1 className="header-destinations">7-Day Forecast Destinations</h1>
+                <div className="buttons-destinations">
+                    <SortButtons
+                    onSortByName={handleSortByName}
+                    onSortByScore={handleSortByScore}
+                    isSortedByNameAsc={sortConfig.type === 'name' && sortConfig.asc}
+                    isSortedByScoreAsc={sortConfig.type === 'score' && sortConfig.asc}
+                    />
+                    <ToggleButton onClick={resetWeatherTypes}>Show All</ToggleButton>
+                </div>
             </div>
             <div className="destinations">
                 {sortedDestinations.map(({ city, data, score }) => (

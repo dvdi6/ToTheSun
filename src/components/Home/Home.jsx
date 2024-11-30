@@ -13,9 +13,9 @@ export default function Home() {
     const navigate = useNavigate()
 
     const weatherOptions = [
-        { label: 'Sunny', value: 'Sunny' },
-        { label: 'Mostly Sun', value: 'Mostly Sun' },
-        { label: 'Partly Cloudy', value: 'Partly Cloudy' }
+        { label: 'Sunny', value: 'Sunny ☀️' },
+        { label: 'Mostly Sun', value: 'Mostly Sun 🌤️' },
+        { label: 'Partly Cloudy', value: 'Partly Cloudy 🌥️' }
     ]
 
     useEffect(() => {

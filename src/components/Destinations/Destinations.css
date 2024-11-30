@@ -14,7 +14,6 @@
     line-height: 50px;
     margin-bottom: 0;
     margin-top: 0;
-    text-align: center;
 }
 
 #link-home {
@@ -26,14 +25,11 @@
     margin-left: 0.5rem;
     margin-bottom: 0.5rem;
     text-decoration: none;
-    align-self: center;
 }
 
 #link-home::before {
     content: "← ";
     margin-right: 3px; 
-    color: inherit;
-    font-size: inherit; 
     text-decoration: none;
 }
 
@@ -44,30 +40,28 @@
 }
 
 .destinations {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); 
-    gap: 1rem;
+    display: flex;
+    flex-direction: column;
     justify-content: center; 
-    align-content: center; 
+    align-items: center; 
     margin: 0 auto;
-    padding: 1rem;
-    max-width: 1500px; 
-    overflow: auto;
+    width: 100%;
 }
 
 .destination-container {
-    display: grid;
-    grid-template-rows: 50% 50%;
+    display: flex;
+    flex-direction: column;
     gap: 0.5rem;
     align-items: center;
-    max-width: 800px;
-    min-height: 400px; /* Fixed height for the container */
-    margin-bottom: 1rem;
+    justify-content: center;
+    margin-bottom: 0.5rem;
     background-color: #F5F5F5;
     border-radius: 12px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
     padding: 1rem;
     box-sizing: border-box;
+    width: 95%;
+    max-width: 95%;
 }
 
 .destination-details-container {
@@ -77,6 +71,7 @@
     align-items: flex-start;
     gap: 0.5rem;
     justify-content: space-between;
+    
 }
 
 .destination-name-container {
@@ -86,26 +81,29 @@
 }
 
 .destination-name {
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: bold;
+    color: #4A4A4A;
 }
 
 .destination-description {
-    font-size: 1rem;
+    font-size: 0.8rem;
     font-weight: normal;
     font-style: italic;
+    margin-bottom: 1.5rem;
 }
 
 .location-link {
     font-size: 1rem;
-    color: #1A1B1B;
+    color: #4A4A4A;
     margin-left: 0.5rem;
 }
 
 .destination-image {
-    width: 200px;
-    aspect-ratio: 1 / 1;
-    height: 200px;
+    width: 150px;
+    height: 150px;
+    min-height: 150px;
+    min-width: 150px;
     object-fit: cover;
     border-radius: 12px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
@@ -123,9 +121,19 @@
     align-items: center;
 }
 
+.week-forecast {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
 .day-forecast {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    color: #4A4A4A;
     gap: 1rem;
     font-size: 0.8rem;
     width: 100%;
@@ -133,9 +141,10 @@
 
 .dayname, .conditions, .temperature {
     text-align: left;
+    align-items: flex-start;
 }
 
-@media (min-width: 340px) and (max-width: 500px) {
+/* @media (min-width: 340px) and (max-width: 500px) {
     .destinations {
         grid-template-columns: 1fr; 
         max-width: 400px;
@@ -206,5 +215,5 @@
     .day-forecast {
         font-size: 0.975rem;
     }
-}
+} */
 

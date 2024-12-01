@@ -9,8 +9,8 @@ export default function calculateWeatherScore(weatherData) {
         const maxTemp = weatherData.temperature_2m_max[index]
         const weatherDescription = weatherCodeDescriptions[code]
 
-        const isGoodWeather = ["Sunny ☀️", "Mostly Sun 🌤️", "Partly Cloudy 🌥️"].includes(weatherDescription)
-        const isSunny = ["Sunny ☀️", "Mostly Sun 🌤️"].includes(weatherDescription)
+        const isGoodWeather = ["☀️", "🌤️", "🌥️"].includes(weatherDescription)
+        const isSunny = ["☀️", "🌤️"].includes(weatherDescription)
         const isWarm = maxTemp >= 20
         const isMild = maxTemp >= 15
 

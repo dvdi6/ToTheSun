@@ -43,13 +43,15 @@ export default function Home() {
         <div className="center">
             <div className="home-container">
                 <img src={bannnerImg} alt="picture of beach" />
+                <div className="home-container-content">
+                    <h1 className="home-header">To the Sun!</h1>
+                    <TemperatureSlider value={temperature} onChange={handleTemperatureChange} />
+                    <FilterWeatherTypeBtn options={weatherOptions} onChange={toggleWeatherType} />
+                    <SearchBtn startSearching={startSearching}>Search here!</SearchBtn>
+                </div>
             </div>
-            <h1 className="home-header">To the Sun!</h1>
-            <div className="select-box">
-                <TemperatureSlider value={temperature} onChange={handleTemperatureChange} />
-                <FilterWeatherTypeBtn options={weatherOptions} onChange={toggleWeatherType} />
-            </div>
-                <SearchBtn startSearching={startSearching}>Search here!</SearchBtn>
+        
+     
             <div className="home-text">    
                 <p className="home-subheader">Discover Your Perfect Last-Minute Getaway!</p>
                 <p className="home-subheader2">

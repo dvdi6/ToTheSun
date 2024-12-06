@@ -25,6 +25,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-color: #F5F5F5;
+    width: 100%;
 }
 
 .home-header {
@@ -58,38 +60,5 @@
     color: #4A4A4A;
     padding: 1rem;
     margin-top: 0;
-}
-
-@media (min-width: 768px) {
-
-    .home-container {
-        width: 100%;
-        min-height: 80%;
-        flex-direction: row;
-    }
-
-    .home-container img {
-        width: 50%;
-        min-height: 60vh;
-        object-fit: cover;
-        object-position: center;
-    }
-
-    .home-header {
-        margin-bottom: 1rem;
-    }
-
-    .home-container-content {
-        width: 50%;
-        gap: 3rem;
-    }
-
-    .home-text {
-        margin-top: 0;
-        min-height: 40vh;
-        padding: 0.5rem;
-        justify-content: flex-start;
-    }
-
 }
 

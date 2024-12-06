@@ -3,12 +3,18 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    height: 8%;
+    height: 100px;
     max-width: 100%;
     color: #4A4A4A;
-    background-color: #FAFAFA;
+    background-color: #F7F3EA;
     padding: 1rem;
-    border-bottom: 1px solid #333333; 
+    border-bottom: 2px solid #E0DED6; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .nav-links {

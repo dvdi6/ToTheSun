@@ -21,14 +21,17 @@ body {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); 
 }
 
+.footer {
+    position: relative;
+    bottom: 0;
+    left: 200px;
+    width: 100%;
+    z-index: 1000;
+}
+
 .footer-link {
     text-decoration: none;
     color: inherit;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
 }
 
 @media (min-width: 768px) {

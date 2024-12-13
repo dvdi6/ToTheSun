@@ -1,0 +1,19 @@
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 1rem;
+    line-height: 2rem;
+}
+
+.about-container ul {
+    line-height: 2.5rem;
+}
+
+@media (min-width: 768px) {
+    .about-container {
+        width: 760px;
+    }
+}

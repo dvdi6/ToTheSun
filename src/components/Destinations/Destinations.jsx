@@ -8,7 +8,7 @@ import calculateWeatherScore from '../Data/calculateWeatherScore.js'
 import { NavLink } from 'react-router-dom'
 import Home from '../../components/Home/Home'
 import ToggleButton from '../ToggleButton/ToggleButton.jsx'
-import Footer from '../Footer.jsx'
+
 
 export default function Destinations() {
     const { loading, weatherData } = useContext(WeatherDataContext)
@@ -84,7 +84,6 @@ export default function Destinations() {
                         temperature={temperature}
                     />
                 ))}
-                <Footer />
             </div>
         </>
     )

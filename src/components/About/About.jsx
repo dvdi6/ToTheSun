@@ -27,8 +27,7 @@ export default function About() {
                         <li>Find the Perfect Spot: Compare destinations at a glance and plan your travels with ease.</li>
                     </ul>
                     <h2>Why choose To The Sun?</h2>
-                    <p>We know that the winter blues can take a toll, and nothing lifts the spirit like a little sunshine. Our goal is to make your search for the perfect sunny escape as seamless and enjoyable as possible. With reliable data and user-friendly features, To The Sun makes finding the sun effortless.</p>
-                <Footer />
+                    <p>We know that the winter blues can take a toll, and nothing lifts the spirit like a little sunshine. Our goal is to make your search for the perfect sunny escape as seamless and enjoyable as possible. With reliable data and user-friendly features, To The Sun makes finding the sun effortless.</p>            
             </div>
            
         </>

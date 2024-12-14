@@ -37,6 +37,9 @@ import bodrumImg from "../../assets/Bodrum.jpg"
 import granadaImg from "../../assets/Granada.jpg"
 import santoriniImg from "../../assets/Santorini.jpg"
 import rhodosImg from "../../assets/Rhodos.jpg"
+import malagaImg from "../../assets/Malaga.jpg"
+import alicanteImg from "../../assets/Alicante.jpg"
+import agadirImg from "../../assets/Agadir.jpg"
 
 export const destinations = [
     {
@@ -92,6 +95,24 @@ export const destinations = [
         description: "Renowned for its flamenco dancing, Gothic cathedral, and Alcazar palace.",
         img: sevilleImg,
         location: "https://www.google.com/maps/search/?api=1&query=37.3886,-5.9823"
+    },
+    {
+        name: "Alicante",
+        country: "Spain",
+        lat: 38.3452,
+        lon: -0.4815,
+        description: "A coastal city on the Costa Blanca, known for its beaches, mild winter climate, and Santa Bárbara Castle.",
+        img: alicanteImg,
+        location: "https://www.google.com/maps/search/?api=1&query=38.3452,-0.4815"
+    }, 
+    {
+        name: "Agadir",
+        country: "Morocco",
+        lat: 30.4278,
+        lon: -9.5981,
+        description: "A coastal city known for its sandy beaches, warm winter weather, and laid-back atmosphere.",
+        img: agadirImg,
+        location: "https://www.google.com/maps/search/?api=1&query=30.4278,-9.5981"
     },
     {
         name: "Barcelona",
@@ -168,8 +189,8 @@ export const destinations = [
     {
         name: "Mallorca",
         country: "Spain",
-        lat: 39.6953,
-        lon: 3.0176,
+        lat: 39.5696,
+        lon: 2.6502,
         description: "Known for its beaches, scenic mountains, and picturesque villages.",
         img: mallorcaImg,
         location: "https://www.google.com/maps/search/?api=1&query=39.6953,3.0176"
@@ -183,6 +204,15 @@ export const destinations = [
         img: bilbaoImg,
         location: "https://www.google.com/maps/search/?api=1&query=43.2630,-2.9350"
     },
+    {
+        name: "Málaga",
+        country: "Spain",
+        lat: 36.7213,
+        lon: -4.4214,
+        description: "A historic coastal city known for its beaches, vibrant culture, and as the birthplace of Picasso.",
+        img: malagaImg,
+        location: "https://www.google.com/maps/search/?api=1&query=36.7213,-4.4214"
+    }, 
     {
         name: "Nice",
         country: "France",
@@ -222,8 +252,8 @@ export const destinations = [
     {
         name: "Madeira",
         country: "Portugal",
-        lat: 32.7607,
-        lon: -16.9595,
+        lat: 32.66568,
+        lon: -16.92547,
         description: "A Portuguese island known for its rugged landscape, wine, and vibrant flora.",
         img: madeiraImg,
         location: "https://www.google.com/maps/search/?api=1&query=32.7607,-16.9595"
@@ -231,8 +261,8 @@ export const destinations = [
     {
         name: "Gran Canaria",
         country: "Spain",
-        lat: 27.9202,
-        lon: -15.5477,
+        lat: 28.1235,
+        lon: 15.4363,
         description: "A Canary Island famous for its diverse landscapes, beaches, and year-round sunshine.",
         img: granCanariaImg,
         location: "https://www.google.com/maps/search/?api=1&query=27.9202,-15.5477"
@@ -249,8 +279,8 @@ export const destinations = [
         {
             name: "Lanzarote",
             country: "Spain",
-            lat: 29.0469,
-            lon: -13.5899,
+            lat: 28.9630,
+            lon: 15.4363,
             description: "An island with volcanic landscapes, beaches, and unique lava caves.",
             img: lanzaroteImg,
             location: "https://www.google.com/maps/search/?api=1&query=29.0469,-13.5899"
@@ -321,8 +351,8 @@ export const destinations = [
         {
             name: "Corsica",
             country: "France",
-            lat: 42.0396,
-            lon: 9.0129,
+            lat: 41.9192,
+            lon: 8.7386,
             description: "An island with rugged mountains, coastal towns, and scenic beaches.",
             img: corsicaImg,
             location: "https://www.google.com/maps/search/?api=1&query=42.0396,9.0129"

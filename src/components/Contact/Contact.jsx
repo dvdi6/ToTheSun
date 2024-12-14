@@ -1,6 +1,7 @@
-import Footer from "../Footer"
 import emailjs from "emailjs-com"
-import { useState } from "react";
+import { useState } from "react"
+import "./Contact.css"
+
 
 export default function Contact() {
     const [formData, setFormData] = useState({
@@ -21,10 +22,10 @@ export default function Contact() {
     
         emailjs
           .send(
-            "service_srw4lzj", // Replace with your EmailJS service ID
-            "template_q2r71i9", // Replace with your EmailJS template ID
+            "service_srw4lzj", 
+            "template_q2r71i9", 
             formData,
-            "vWS7shaUkCYd4w5st" // Replace with your EmailJS user ID
+            "vWS7shaUkCYd4w5st" 
           )
           .then(
             (result) => {
@@ -38,7 +39,7 @@ export default function Contact() {
       };
     
       return (
-        <div style={{ maxWidth: "760px", margin: "0 auto", padding: "20px" }}>
+        <div className="contact-container">
           <h2>Contact Us</h2>
           <form onSubmit={handleSubmit}>
             <div>
@@ -47,10 +48,10 @@ export default function Contact() {
                 type="text"
                 id="name"
                 name="name"
+                className="contact-inputs"
                 value={formData.name}
                 onChange={handleChange}
                 required
-                style={{ width: "100%", padding: "10px", margin: "10px 0" }}
               />
             </div>
             <div>
@@ -59,10 +60,10 @@ export default function Contact() {
                 type="email"
                 id="email"
                 name="email"
+                className="contact-inputs"
                 value={formData.email}
                 onChange={handleChange}
                 required
-                style={{ width: "100%", padding: "10px", margin: "10px 0" }}
               />
             </div>
             <div>
@@ -73,15 +74,14 @@ export default function Contact() {
                 value={formData.message}
                 onChange={handleChange}
                 required
-                style={{ width: "100%", padding: "10px", margin: "10px 0", height: "100px" }}
+                className="contact-inputs"
               />
             </div>
-            <button type="submit" style={{ padding: "10px 20px", cursor: "pointer" }}>
+            <button className="submit-btn" type="submit">
               Send Feedback
             </button>
           </form>
-          {successMessage && <p style={{ marginTop: "10px" }}>{successMessage}</p>}
-          <Footer />
+          {successMessage && <p className="succes-message">{successMessage}</p>}
         </div>
       )
 }

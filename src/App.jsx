@@ -7,6 +7,7 @@ import Contact from './components/Contact/Contact.jsx'
 import Destinations from './components/Destinations/Destinations.jsx'
 import FetchWeatherData from './components/Data/FetchWeatherData.jsx'
 import { AppProvider } from './components/Data/AppContext.jsx'
+import Footer from './components/Footer.jsx'
 
 export default function App() {
   return (
@@ -23,6 +24,7 @@ export default function App() {
                         </Routes>
                     </FetchWeatherData>
         </AppProvider>
+        <Footer />
       </Router>
   )
 }

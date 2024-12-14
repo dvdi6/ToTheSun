@@ -24,9 +24,9 @@ export default function DestinationCard({ city, data, score, selectedWeatherType
     const shouldDisplayDestination = (selectedWeatherTypes.length === 0 || matchesSelectedWeather) && hasDesiredTemperature
 
     const getScoreColor = (score) => {
-        if (score >= 8) {
+        if (score >= 7) {
             return '#6BAF92';
-        } else if (score >= 6) {
+        } else if (score >= 5) {
             return '#F5A25D';
         } else {
             return '#E57373';

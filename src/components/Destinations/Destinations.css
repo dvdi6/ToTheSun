@@ -138,6 +138,10 @@
     width: 100%;
 }
 
+.conditions {
+    font-size: 1rem;
+}
+
 @media (min-width: 768px) {
 
 
@@ -152,6 +156,10 @@
         width: 365px;
         height: 350px;
         padding: 0.75rem;
+    }
+
+    .conditions {
+        font-size: 1.5rem;
     }
 }
 

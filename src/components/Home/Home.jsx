@@ -6,7 +6,7 @@ import SearchBtn from "../SearchBtn/SearchBtn"
 import FilterWeatherTypeBtn from "../FilterWeatherType/FilterWeatherTypeBtn"
 import { AppContext } from "../Data/AppContext"
 import bannnerImg from "../../assets/Banner.jpg"
-import Footer from "../Footer"
+
 
 export default function Home() {
 
@@ -59,7 +59,6 @@ export default function Home() {
                         Your tool for finding the best travel destinations with sunny, warm weather during wintertime.
                  </p>
             </div>
-            <Footer/>
         </div>
     )
 }

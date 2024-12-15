@@ -11,7 +11,7 @@ import ToggleButton from '../ToggleButton/ToggleButton.jsx'
 
 
 export default function Destinations() {
-    const { loading, weatherData } = useContext(WeatherDataContext)
+    const { loading, weatherData, error} = useContext(WeatherDataContext)
     const { selectedWeatherTypes, temperature, resetWeatherTypes } = useContext(AppContext)
     const [sortConfig, setSortConfig] = useState({ type: 'name', asc: true })
 
@@ -55,6 +55,8 @@ export default function Destinations() {
     )
 
     if (loading) return <p className="loading">Loading weather data...</p>
+
+    if (error) return <p className='error'>Sorry, we are currently experiencing an issue with our data, please return or leave feedback here.</p>
 
     return (
         <>

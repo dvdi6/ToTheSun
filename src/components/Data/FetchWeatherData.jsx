@@ -7,6 +7,7 @@ export default function FetchWeatherData({ children }) {
 
     const [weatherData, setWeatherData] = useState({})
     const [loading, setLoading] = useState(true)
+    const [error, setError] = useState(null)
 
     useEffect(() => {
         const fetchWeatherForDestinations = async () => {
@@ -28,6 +29,7 @@ export default function FetchWeatherData({ children }) {
                 setWeatherData(weatherResults)
             } catch (error) {
                 console.error("Error fetching data:", error)
+                setError(error.message)
             } finally {
                 setLoading(false)
             }
@@ -37,7 +39,7 @@ export default function FetchWeatherData({ children }) {
     }, []) 
  
     return (
-        <WeatherDataContext.Provider value={{ weatherData, loading }}>
+        <WeatherDataContext.Provider value={{ weatherData, loading, error }}>
             {children}
         </WeatherDataContext.Provider>
     )

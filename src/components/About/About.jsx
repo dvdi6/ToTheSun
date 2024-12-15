@@ -1,4 +1,3 @@
-import Footer from "../Footer"
 import "./About.css"
 import { NavLink } from "react-router-dom"
 import Home from "../Home/Home"
@@ -13,12 +12,12 @@ export default function About() {
                                     Home
                 </NavLink>
                 <h1>About Info</h1>
-                <p>To The Sun is your perfect companion for finding sunny and mild destinations during the colder winter months. Whether you’re planning a quick getaway or a long escape, our app helps you discover the best European destinations with pleasant weather.</p>
+                <p>To The Sun is your perfect companion for finding sunny and mild destinations during the colder winter months. If you're planning a quick get-away, our app helps you discover the best European destinations with pleasant weather.</p>
                   <h2>What we Offer</h2>  
                     <ul>
                         <li>Weather Insights: We analyze weekly weather forecasts to provide a weather score for each destination, rated from 1 to 10 based on sunshine, temperatures, and overall pleasantness.</li>
                         <li>Personalized Filtering: Customize your search with filters to find the perfect place to match your preferences, from sunny beaches to cozy cities with mild climates.</li>
-                        <li>Comprehensive Destinations: Start your journey with 20 curated European locations, handpicked for their unique charm and reliable winter weather.</li>
+                        <li>Comprehensive Destinations: Start your journey with 42 curated locations, handpicked for their unique charm and reliable winter weather.</li>
                     </ul>
                     <h2>How it works</h2>
                     <ul>

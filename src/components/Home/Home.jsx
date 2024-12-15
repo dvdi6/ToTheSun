@@ -32,13 +32,11 @@ export default function Home() {
         navigate("/destinations")
     }
 
-    window.addEventListener('resize', () => {
-        const width = window.innerWidth;
-        const height = window.innerHeight;
-        console.log(`Width: ${width}, Height: ${height}`);
-    });
-
-    console.log(selectedWeatherTypes)
+    // window.addEventListener('resize', () => {
+    //     const width = window.innerWidth;
+    //     const height = window.innerHeight;
+    //     console.log(`Width: ${width}, Height: ${height}`);
+    // });
 
     return (
         <div className="center">

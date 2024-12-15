@@ -4,10 +4,10 @@ export default function SortButtons({ onSortByName, onSortByScore, isSortedByNam
     return (
         <div className="sort-buttons">
             <button onClick={onSortByName} className="sort-button">
-                Sort {isSortedByNameAsc ? 'A-Z' : 'Z-A'}
+                Sort {isSortedByNameAsc ? 'Z-A' : 'A-Z'}
             </button>
             <button onClick={onSortByScore} className="sort-button">
-                Sort {isSortedByScoreAsc ? 'Low-High' : 'High-Low'}
+                Sort {isSortedByScoreAsc ? 'High-Low' : 'Low-High'}
             </button>
         </div>
     )

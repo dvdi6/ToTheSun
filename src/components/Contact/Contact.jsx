@@ -41,6 +41,7 @@ export default function Contact() {
       return (
         <div className="contact-container">
           <h2>Contact Us</h2>
+          <p>Give us feedback, or ask your questions about our application.</p>
           <form onSubmit={handleSubmit}>
             <div>
               <label htmlFor="name">Name</label>

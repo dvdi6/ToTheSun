@@ -10,7 +10,7 @@ import bannnerImg from "../../assets/Banner.jpg"
 
 export default function Home() {
 
-    const { selectedWeatherTypes, toggleWeatherType, resetWeatherTypes, temperature, setTemperature } = useContext(AppContext)
+    const { toggleWeatherType, resetWeatherTypes, temperature, setTemperature } = useContext(AppContext)
     const navigate = useNavigate()
 
     const weatherOptions = [
@@ -41,10 +41,16 @@ export default function Home() {
     return (
         <div className="center">
             <div className="home-container">
-                <img src={bannnerImg} alt="picture of beach" />
+                <img src={bannnerImg} 
+                 alt="A scenic beach with sunshine, inviting you to plan your getaway"
+                 role="img"
+                 />
                 <div className="home-container-content">
-                    <h1 className="home-header">To the Sun!</h1>
-                    <TemperatureSlider value={temperature} onChange={handleTemperatureChange} />
+                    <h1 className="home-header" aria-label="To the Sun! Your ultimate travel destination finder">To the Sun!</h1>
+                    <TemperatureSlider 
+                        value={temperature} 
+                        onChange={handleTemperatureChange} 
+                        />
                     <FilterWeatherTypeBtn options={weatherOptions} onChange={toggleWeatherType} />
                     <SearchBtn startSearching={startSearching}>Search here!</SearchBtn>
                 </div>

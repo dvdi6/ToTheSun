@@ -11,6 +11,7 @@ export default function FilterWeatherTypeBtn({ options, onChange }) {
                         name="weather"
                         value={option.value}
                         onChange={(e) => onChange(e.target.value, e.target.checked)}
+                        aria-label="Select your preferred weather type"
                     />
                     {option.label}
                 </label>

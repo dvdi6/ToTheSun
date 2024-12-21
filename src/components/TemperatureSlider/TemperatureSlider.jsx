@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './TemperatureSlider.css'
 
-export default function TemperatureSlider({ min = 0, max = 40, step = 1, initialValue = 20, onChange }) {
+export default function TemperatureSlider({ min = 10, max = 30, step = 1, initialValue = 20, onChange }) {
     const [value, setValue] = useState(initialValue)
 
     const handleChange = (event) => {
@@ -23,6 +23,7 @@ export default function TemperatureSlider({ min = 0, max = 40, step = 1, initial
                 value={value}
                 onChange={handleChange}
                 className="slider"
+                aria-label="Adjust temperature preference"
             />
             <span>Select Temperature: {value}°C</span>
         </div>

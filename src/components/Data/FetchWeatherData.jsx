@@ -29,7 +29,7 @@ export default function FetchWeatherData({ children }) {
                 setWeatherData(weatherResults)
             } catch (error) {
                 console.error("Error fetching data:", error)
-                setError(error.message)
+                setError(true)
             } finally {
                 setLoading(false)
             }

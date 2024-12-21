@@ -8,7 +8,7 @@ import calculateWeatherScore from '../Data/calculateWeatherScore.js'
 import { NavLink } from 'react-router-dom'
 import Home from '../../components/Home/Home'
 import ToggleButton from '../ToggleButton/ToggleButton.jsx'
-
+import { ClipLoader } from 'react-spinners'
 
 export default function Destinations() {
     const { loading, weatherData, error} = useContext(WeatherDataContext)
@@ -54,17 +54,18 @@ export default function Destinations() {
         [destinationsWithScore, sortConfig]
     )
 
-    if (loading) return <p className="loading">Loading weather data...</p>
-
-    if (error) return <p className='error'>Sorry, we are currently experiencing an issue with our data, please return or leave feedback here.</p>
+    console.log("sortedDestinations:", sortConfig);
 
     return (
         <>
             <div className="container-header-link">
+            {error && <p className='error'>Sorry, we are currently experiencing an issue with our data, please return later or let us now in our 
+                <NavLink id="link-home" to="/contact">Form</NavLink></p>}
                 <NavLink id="link-home" to="/" element={<Home />}>
                     Home
                 </NavLink>
                 <h1 className="header-destinations">7-Day Forecast Destinations</h1>
+                {loading && <ClipLoader />}
                 <div className="buttons-destinations">
                     <SortButtons
                     onSortByName={handleSortByName}
@@ -75,14 +76,16 @@ export default function Destinations() {
                     <ToggleButton onClick={resetWeatherTypes}>Show All</ToggleButton>
                 </div>
             </div>
+          
             <div className="destinations">
+              
                 {sortedDestinations.map(({ city, data, score }) => (
                     <DestinationCard
                         key={city}
                         city={city}
                         data={data}
                         score={score}
-                        selectedWeatherTypes={selectedWeatherTypes} 
+                        selectedWeatherTypes={selectedWeatherTypes}
                         temperature={temperature}
                     />
                 ))}

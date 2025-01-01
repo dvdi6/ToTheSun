@@ -1,4 +1,4 @@
-import { weatherCodeDescriptions  } from "../Data/WeatherCodeDescription"
+import { weatherCodeDescriptions  } from "./WeatherCodeDescription"
 
 
 export default function WeatherForecast({ data }) {

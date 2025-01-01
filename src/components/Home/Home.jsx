@@ -1,11 +1,11 @@
 import {useContext, useEffect} from "react"
 import { useNavigate } from "react-router-dom"
 import "./Home.css"
-import TemperatureSlider from "../TemperatureSlider/TemperatureSlider"
-import SearchBtn from "../SearchBtn/SearchBtn"
-import FilterWeatherTypeBtn from "../FilterWeatherType/FilterWeatherTypeBtn"
+import TemperatureSlider from "../Buttons/TemperatureSlider"
+import SearchBtn from "../Buttons/SearchBtn"
+import FilterWeatherTypeBtn from "../Buttons/FilterWeatherTypeBtn"
 import { AppContext } from "../Data/AppContext"
-import bannnerImg from "../../assets/Banner.jpg"
+import bannerImg from "../../assets/Banner.jpg"
 
 
 export default function Home() {
@@ -39,31 +39,49 @@ export default function Home() {
     // });
 
     return (
-        <div className="center">
+        <main className="center" role="main">
             <div className="home-container">
-                <img src={bannnerImg} 
-                 alt="A scenic beach with sunshine, inviting you to plan your getaway"
-                 role="img"
-                 />
+                <img 
+                    src={bannerImg} 
+                    alt="A scenic beach with sunshine, inviting you to plan your getaway"
+                    role="img" 
+                    aria-label="Scenic beach with sunshine" 
+                />
                 <div className="home-container-content">
-                    <h1 className="home-header" aria-label="To the Sun! Your ultimate travel destination finder">To the Sun!</h1>
+                    <h1 
+                        className="home-header" 
+                        aria-label="To the Sun! Your ultimate travel destination finder"
+                    >
+                        To the Sun!
+                    </h1>
                     <TemperatureSlider 
                         value={temperature} 
                         onChange={handleTemperatureChange} 
-                        />
-                    <FilterWeatherTypeBtn options={weatherOptions} onChange={toggleWeatherType} />
-                    <SearchBtn startSearching={startSearching}>Search here!</SearchBtn>
+                        aria-label={`Adjust the temperature preference. Current value: ${temperature} degrees`} 
+                    />
+                    <FilterWeatherTypeBtn 
+                        options={weatherOptions} 
+                        onChange={toggleWeatherType} 
+                        aria-label="Filter by weather type"
+                    />
+                    <SearchBtn 
+                        startSearching={startSearching} 
+                        aria-label="Start searching for your destination"
+                    >
+                        Search here!
+                    </SearchBtn>
                 </div>
             </div>
-        
-     
-            <div className="home-text">    
-                <p className="home-subheader">Discover Your Perfect Last-Minute Getaway!</p>
+    
+            <div className="home-text" aria-labelledby="home-subheader">
+                <p id="home-subheader" className="home-subheader">
+                    Discover Your Perfect Last-Minute Getaway!
+                </p>
                 <p className="home-subheader2">
-                        Your tool for finding the best travel destinations with sunny, warm weather during wintertime.
-                 </p>
+                    Your tool for finding the best travel destinations with sunny, warm weather during wintertime.
+                </p>
             </div>
-        </div>
+        </main>
     )
 }
 

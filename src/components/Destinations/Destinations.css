@@ -142,6 +142,13 @@
     font-size: 1rem;
 }
 
+.no-destinations {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 @media (min-width: 768px) {
 
 
@@ -167,7 +174,7 @@
 @media (min-width: 1200px) {
 
     .destinations {
-        width: 1300px;
+        width: 1230px;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;

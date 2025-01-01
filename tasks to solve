@@ -1,6 +1,4 @@
-- refactor folders in code a bit 
-- error-handling for edge cases 
-- semantics and accessibility of the app
+
 - optimized assets and images. 
 - multiple browser testing 
 - check performance app in devtools

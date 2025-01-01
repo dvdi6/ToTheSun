@@ -1,5 +1,5 @@
 import {useState, useEffect, createContext} from 'react'
-import { destinations } from '../Destinations/DestinationsData'
+import { destinations } from './DestinationsData'
 
 const WeatherDataContext = createContext()
 

@@ -1,4 +1,4 @@
-
+- fix pagecrash after refresh destinations
 - optimized assets and images. 
 - multiple browser testing 
 - check performance app in devtools

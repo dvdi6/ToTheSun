@@ -1,5 +1,6 @@
 - optimized assets and images. 
 - multiple browser testing 
+- security checks (email) + rate limiting
 - check performance app in devtools
 - READme file completion 
 - favicon

@@ -1,8 +1,16 @@
-import fetch from "node-fetch"
-
 const rateLimitCache = {}
 
 export async function handler(event) {
+  const { EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, EMAILJS_USER_ID } = process.env
+
+  if (!EMAILJS_SERVICE_ID || !EMAILJS_TEMPLATE_ID || !EMAILJS_USER_ID) {
+    console.error("Missing EmailJS environment variables")
+    return {
+      statusCode: 500,
+      body: JSON.stringify({ error: "Server configuration error. Please try again later." })
+    }
+  }
+
   try {
     const { name, email, message } = JSON.parse(event.body)
 
@@ -38,17 +46,17 @@ export async function handler(event) {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        service_id: process.env.EMAILJS_SERVICE_ID,
-        template_id: process.env.EMAILJS_TEMPLATE_ID,
-        user_id: process.env.EMAILJS_USER_ID,
+        service_id: EMAILJS_SERVICE_ID,
+        template_id: EMAILJS_TEMPLATE_ID,
+        user_id: EMAILJS_USER_ID,
         template_params: { name, email, message }
       })
     })
 
     if (!response.ok) {
       const errorDetails = await response.text()
-      console.error("EmailJS API Error:", errorDetails)
-      throw new Error(`EmailJS API responded with status ${response.status}`)
+      console.error(`EmailJS API Error: ${errorDetails}`)
+      throw new Error(`EmailJS API responded with status ${response.status}: ${errorDetails}`)
     }
 
     return {
@@ -59,7 +67,7 @@ export async function handler(event) {
     console.error("Error sending email:", error)
     return {
       statusCode: 500,
-      body: JSON.stringify({ error: "Failed to send email. Please try again later" })
+      body: JSON.stringify({ error: "Failed to send email. Please try again later." })
     }
   }
 }

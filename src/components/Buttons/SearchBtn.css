@@ -18,8 +18,8 @@
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
 }
 
-/* --bone: #E1D5BFff;
---brown-sugar: #AB5C3Aff;
---buff: #E2A573ff;
---khaki: #C5B39Eff;
---carrot-orange: #F19A41ff; */
+.search-button:active {
+    background-color: #E0E0E0;
+    color: #333;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+}

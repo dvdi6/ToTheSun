@@ -11,7 +11,7 @@ ToTheSun is a React-based weather app that helps users find European destination
 - 📊 **Weather Scoring**: Destinations are rated on a scale of 1-10 based on weather conditions.
 - 🔍 **Custom Filters**: Filter destinations by temperature and weather type.
 - 🔄 **Sorting Options**: Sort destinations alphabetically or by weather score.
-- 🏖 **Responsive Design**: Optimized for desktop, tablets and mobile devices.
+- 🏖 **Responsive Design**: Optimized for desktop, tablets, and mobile devices.
 - 🚀 **Fast Loading**: Built with Vite for ultra-fast development and deployment.
 
 ---
@@ -27,18 +27,31 @@ ToTheSun is a React-based weather app that helps users find European destination
 
 ---
 
-## **Getting Started** 🏗
+## **Deployment** 🚀
 
-Follow these steps to run the project locally:
+The project is live and deployed on Netlify. Check it out here:
 
-### Prerequisites
+[**ToTheSun Live Site**](https://tothesun.netlify.app)
 
-- **Node.js**: Ensure you have Node.js (v14 or later) installed.
-- **npm or Yarn**: Package manager for installing dependencies.
+---
 
-### Installation
+## **Roadmap** 🛤
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/tothesun.git
-   cd tothesun
+- [ ] Add user accounts and saved destinations.
+- [ ] Integrate a map view for destinations.
+- [ ] Add support for more destinations outside Europe.
+- [ ] Implement dark mode for better accessibility.
+
+---
+
+## **License** 📄
+
+This project is licensed under the [MIT License](./LICENSE.md).
+
+---
+
+## **Acknowledgments** 🙏
+
+- [Open Meteo API](https://open-meteo.com/) for reliable weather data.
+- [Vite](https://vitejs.dev/) for a fast and modern build tool.
+- [Netlify](https://www.netlify.com/) for hassle-free deployment.

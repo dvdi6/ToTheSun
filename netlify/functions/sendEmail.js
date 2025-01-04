@@ -1,11 +1,9 @@
-import fetch from "node-fetch" // Built-in fetch in Node.js 18+ works too
+import fetch from "node-fetch" 
 
 export async function handler(event) {
   try {
-    // Parse request body
     const { name, email, message } = JSON.parse(event.body);
 
-    // Validate input
     if (!name || !email || !message) {
       return {
         statusCode: 400,
@@ -13,7 +11,6 @@ export async function handler(event) {
       };
     }
 
-    // Send email using EmailJS API
     const response = await fetch("https://api.emailjs.com/api/v1.0/email/send", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -29,7 +26,6 @@ export async function handler(event) {
       }),
     });
 
-    // Handle EmailJS API response
     if (!response.ok) {
       const errorDetails = await response.text();
       console.error("EmailJS API Error:", errorDetails);
@@ -49,4 +45,3 @@ export async function handler(event) {
   }
 }
 
-npx

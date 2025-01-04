@@ -75,7 +75,7 @@ export default function Destinations() {
             <div className="destinations">
                 {isLoading ? (
                     <div className="loading-container">
-                        <ClipLoader />
+                        <p className='error'>Loading...</p><ClipLoader />
                     </div>
                 ) : sortedDestinations.length === 0 ? (
                     <div className="no-destinations">

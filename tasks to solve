@@ -1,5 +1,4 @@
-- convert logo to svg format 
-- shortPixel set up
+
 - multiple browser testing 
 - security checks (email) + rate limiting
 - check performance app in devtools

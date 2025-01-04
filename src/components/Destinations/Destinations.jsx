@@ -62,10 +62,12 @@ export default function Destinations() {
                 <NavLink to="/" id="link-home" aria-label="Go to Home">Home</NavLink>
                 <h1 className="header-destinations">7-Day Forecast Destinations</h1>
                 <div className="buttons-destinations">
-                    <SortButtons
-                        onSortByName={() => setSortConfig({ type: 'name', asc: !sortConfig.asc })}
-                        onSortByScore={() => setSortConfig({ type: 'score', asc: !sortConfig.asc })}
-                    />
+                <SortButtons
+                    onSortByName={() => setSortConfig({ type: 'name', asc: sortConfig.type === 'name' ? !sortConfig.asc : true })}
+                    onSortByScore={() => setSortConfig({ type: 'score', asc: sortConfig.type === 'score' ? !sortConfig.asc : true })}
+                    isSortedByNameAsc={sortConfig.type === 'name' && sortConfig.asc}
+                    isSortedByScoreAsc={sortConfig.type === 'score' && sortConfig.asc}
+                        />
                     <ToggleButton onClick={resetWeatherTypes}>Show All</ToggleButton>
                 </div>
             </div>

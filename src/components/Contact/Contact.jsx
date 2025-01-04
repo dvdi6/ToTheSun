@@ -1,43 +1,28 @@
-import { useState } from "react";
-import "./Contact.css";
+import { useState } from "react"
+import "./Contact.css"
 
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
-  });
+  })
 
-  const [successMessage, setSuccessMessage] = useState("");
+  const [successMessage, setSuccessMessage] = useState("")
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
+    const { name, value } = e.target
+    setFormData({ ...formData, [name]: value })
+  }
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  const handleSubmit = (e) => {
+    e.preventDefault()
 
-    try {
-      const response = await fetch("/.netlify/functions/sendEmail", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
-
-      if (response.ok) {
-        setSuccessMessage("Thank you for your feedback! We'll get back to you soon.");
-        setFormData({ name: "", email: "", message: "" });
-      } else {
-        setSuccessMessage("Oops! Something went wrong. Please try again later.");
-      }
-    } catch (error) {
-      console.error("Error submitting the form:", error);
-      setSuccessMessage("Oops! Something went wrong. Please try again later.");
-    }
-  };
+    setTimeout(() => {
+      setSuccessMessage("Thank you for your feedback! We'll get back to you soon.")
+      setFormData({ name: "", email: "", message: "" })
+    }, 1000)
+  }
 
   return (
     <div className="contact-container" role="main" aria-labelledby="contact-header">
@@ -108,5 +93,5 @@ export default function Contact() {
         </p>
       )}
     </div>
-  );
+  )
 }

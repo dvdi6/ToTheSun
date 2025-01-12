@@ -6,6 +6,7 @@ import SearchBtn from "../Buttons/SearchBtn"
 import FilterWeatherTypeBtn from "../Buttons/FilterWeatherTypeBtn"
 import { AppContext } from "../Data/AppContext"
 import bannerImg from "../../assets/Banner.jpg"
+import HomeText from "./HomeText"
 
 
 export default function Home() {
@@ -72,15 +73,7 @@ export default function Home() {
                     </SearchBtn>
                 </div>
             </div>
-    
-            <div className="home-text" aria-labelledby="home-subheader">
-                <p id="home-subheader" className="home-subheader">
-                    Discover Your Perfect Last-Minute Getaway!
-                </p>
-                <p className="home-subheader2">
-                    Your tool for finding the best travel destinations with sunny, warm weather during wintertime.
-                </p>
-            </div>
+            <HomeText />
         </main>
     )
 }

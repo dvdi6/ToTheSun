@@ -48,7 +48,6 @@ export default function DestinationCard({ city, data, score }) {
                     className="destination-image"
                     src={destinationDetails.img}
                     alt={`Image of ${destinationDetails.name}`}
-                    // loading='lazy'
                 />
             </div>
             <WeatherForecast data={data} aria-label="Weather forecast details" />
